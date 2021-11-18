@@ -22,7 +22,6 @@ def read_and_process(path):
     list_data = []
     with open(path, encoding='utf-8') as F:
         f_csv = csv.reader((F))
-        next(f_csv)
         for line in f_csv:
             label, text, _ = line
             list_data.append((label, text))
@@ -80,8 +79,9 @@ if __name__ == '__main__':
                                                    'data/chinese_wiki_embeding8000.300d.txt', 'cpu')
 
     for (inputs, label), _ in train_iter:
+
         pass
 
-    for i in train_dataset:
-        print(i.text)
-        break
+    # for i in train_dataset:
+    #     print(i.text)
+    #     break
